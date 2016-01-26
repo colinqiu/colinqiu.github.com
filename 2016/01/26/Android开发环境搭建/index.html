@@ -24,19 +24,19 @@
 <li><p>配置Oracle JDK</p>
 <ul>
 <li><p>配置JAVA_HOME和PATH环境变量</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/profile&#10;#&#22312;&#35813;&#25991;&#20214;&#30340;&#26411;&#23614;&#21152;&#19978;&#22914;&#19979;&#37096;&#20998;&#65306;&#10;JAVA_HOME=/usr/local/java/jdk1.6.0_45&#10; PATH=$PATH:$HOME/bin:$JAVA_HOME/bin&#10; export JAVA_HOME&#10; export PATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/profile&#10;#&#22312;&#35813;&#25991;&#20214;&#30340;&#26411;&#23614;&#21152;&#19978;&#22914;&#19979;&#37096;&#20998;&#65306;&#10;JAVA_HOME=/usr/local/java/jdk1.6.0_45&#10;PATH=$PATH:$HOME/bin:$JAVA_HOME/bin&#10;export JAVA_HOME&#10;export PATH</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置ubuntu的JDK和JRE的位置</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install &#34;/usr/bin/java&#34; &#34;java&#34; &#34;/usr/local/java/jdk1.6.0_45/bin/java&#34; 1&#10;sudo update-alternatives --install &#34;/usr/bin/javac&#34; &#34;javac&#34; &#34;/usr/local/java/jdk1.6.0_45/bin/javac&#34; 1&#10;sudo update-alternatives --install &#34;/usr/bin/javaws&#34; &#34;javaws&#34; &#34;/usr/local/java/jdk1.6.0_45/bin/javaws&#34; 1</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置Oracle为系统默认JDK/JRE</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --set java /usr/local/java/jdk1.6.0_45/bin/java&#10; sudo update-alternatives --set javac /usr/local/java/jdk1.6.0_45/bin/javac&#10; sudo update-alternatives --set javaws /usr/local/java/jdk1.6.0_45/bin/javaws</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --set java /usr/local/java/jdk1.6.0_45/bin/java&#10;sudo update-alternatives --set javac /usr/local/java/jdk1.6.0_45/bin/javac&#10;sudo update-alternatives --set javaws /usr/local/java/jdk1.6.0_45/bin/javaws</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>配置完成后，执行如下命令使其立即生效</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-<p> 再次运行“java -version”确认是否安装成功：<br> java version “1.6.0_45”<br>Java(TM) SE Runtime Environment (build 1.6.0_45-b06)<br>Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)</p>
+<p> 再次运行“java -version”确认是否安装成功：<br> java version “1.6.0_45”<br> Java(TM) SE Runtime Environment (build 1.6.0_45-b06)<br> Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)</p>
 </li>
 </ol>
 <h2 id="u4E09_u3001_u5B89_u88C5_u5FC5_u5907_u5DE5_u5177_u8F6F_u4EF6"><a href="#u4E09_u3001_u5B89_u88C5_u5FC5_u5907_u5DE5_u5177_u8F6F_u4EF6" class="headerlink" title="三、安装必备工具软件"></a>三、安装必备工具软件</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git gnupg flex bison gperf build-essential zip curl libc6-dev &#10;sudo apt-get install libncurses5-dev:i386 x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 &#10;sudo apt-get isntall libgl1-mesa-dri:i386 libgl1-mesa-dev g++-multilib mingw32 tofrodos &#10;sudo apt-get install python-markdown libxml2-utils xsltproc zlib1g-dev:i386 dpkg-dev  &#10;sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so</span><br></pre></td></tr></table></figure>
